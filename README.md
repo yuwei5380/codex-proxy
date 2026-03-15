@@ -250,6 +250,9 @@ curl http://localhost:8080/v1/chat/completions \
 
 | 模型 ID | 别名 | 推理等级 | 说明 |
 |---------|------|---------|------|
+| `gpt-5.4` | `gpt-5.4-codex` | none / low / medium / high / xhigh | 最新旗舰模型 |
+| `gpt-5.3-codex` | — | low / medium / high | agentic 编程模型 |
+| `gpt-5.3-codex-spark` | — | minimal / low | 超低延迟编程模型 |
 | `gpt-5.2-codex` | `codex` | low / medium / high / xhigh | 前沿 agentic 编程模型（默认） |
 | `gpt-5.2` | — | low / medium / high / xhigh | 专业工作 + 长时间代理 |
 | `gpt-5.1-codex-max` | — | low / medium / high / xhigh | 扩展上下文 / 深度推理 |
@@ -265,7 +268,7 @@ curl http://localhost:8080/v1/chat/completions \
 > **模型名后缀**：在任意模型名后追加 `-fast` 启用 Fast 模式，追加 `-high`/`-low` 等切换推理等级。
 > 例如：`codex-fast`、`gpt-5.2-codex-high-fast`。
 >
-> **注意**：`gpt-5.4`、`gpt-5.3-codex` 系列已从 free 账号移除，plus 及以上账号仍可使用。
+> **可用性说明**：`gpt-5.4`、`gpt-5.3-codex`、`gpt-5.3-codex-spark` 属于计划受限模型，是否可用取决于当前账号对应的后端模型目录。`gpt-5.4-codex` 作为兼容别名会映射到 `gpt-5.4`。
 > 模型列表由后端动态获取，会自动同步最新可用模型。
 
 ## 🔗 客户端接入 (Client Setup)

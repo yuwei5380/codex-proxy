@@ -170,6 +170,9 @@ curl http://localhost:8080/v1/chat/completions \
 
 | Model ID | Alias | Reasoning Efforts | Description |
 |----------|-------|-------------------|-------------|
+| `gpt-5.4` | `gpt-5.4-codex` | none / low / medium / high / xhigh | Latest flagship model |
+| `gpt-5.3-codex` | — | low / medium / high | Agentic coding model |
+| `gpt-5.3-codex-spark` | — | minimal / low | Ultra-fast coding model |
 | `gpt-5.2-codex` | `codex` | low / medium / high / xhigh | Frontier agentic coding model (default) |
 | `gpt-5.2` | — | low / medium / high / xhigh | Professional work & long-running agents |
 | `gpt-5.1-codex-max` | — | low / medium / high / xhigh | Extended context / deepest reasoning |
@@ -185,7 +188,7 @@ curl http://localhost:8080/v1/chat/completions \
 > **Model name suffixes**: Append `-fast` to any model name to enable Fast mode, or `-high`/`-low` etc. to change reasoning effort.
 > Examples: `codex-fast`, `gpt-5.2-codex-high-fast`.
 >
-> **Note**: `gpt-5.4` and `gpt-5.3-codex` families have been removed for free accounts. Plus and above accounts retain access.
+> **Availability**: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark` are plan-restricted and depend on the backend catalog for the current account. `gpt-5.4-codex` is accepted as a compatibility alias of `gpt-5.4`.
 > Models are dynamically fetched from the backend and will automatically sync the latest available catalog.
 
 ## 🔗 Client Setup
